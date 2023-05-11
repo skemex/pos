@@ -11,6 +11,7 @@ public class ProductRegistrationPanel extends JPanel {
     
     // Button to submit product registration
     private JButton submitButton;
+    private JButton calcSellPrice;
     
     public ProductRegistrationPanel() {
         // Set panel layout
@@ -31,7 +32,7 @@ public class ProductRegistrationPanel extends JPanel {
         
         // Initialize submit button
         submitButton = new JButton("Register Product");
-        
+        calcSellPrice = new JButton("Calc sell price");
         // Add input fields and labels to panel
         add(nameLabel);
         add(nameField);
@@ -46,16 +47,27 @@ public class ProductRegistrationPanel extends JPanel {
         
         // Add button to panel
         add(submitButton);
+        add(calcSellPrice);
+        
+        calcSellPrice.addActionListener(e -> {
+           // Calculate sell price
+           double buyPrice = Double.parseDouble(buyPriceField.getText());
+           double revenuePercentage = Double.parseDouble(revenueField.getText());
+           double sellPrice = (buyPrice / (100 - revenuePercentage)) * 100;
+           sellPriceField.setText(String.format("%.2f", sellPrice)); // Set sell price field to calculated value
+        });
+
         
         // Add action listener to button
         submitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Create new product
+                String code = "17388446GHE"
                 String name = nameField.getText();
                 double buyPrice = Double.parseDouble(buyPriceField.getText());
                 int quantity = Integer.parseInt(quantityField.getText());
                 double revenuePercentage = Double.parseDouble(revenueField.getText());
-                Product p = new Product(name, buyPrice, quantity, revenuePercentage);
+                Product p = new Product(code, name, buyPrice, quantity, revenuePercentage);
                 
                 // Calculate and set sell price
                 p.calculateSellPrice();
