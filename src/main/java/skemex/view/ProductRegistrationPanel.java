@@ -62,7 +62,7 @@ public class ProductRegistrationPanel extends JPanel {
         submitButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 // Create new product
-                String code = "17388446GHE"
+                String code = "17388446GHE";
                 String name = nameField.getText();
                 double buyPrice = Double.parseDouble(buyPriceField.getText());
                 int quantity = Integer.parseInt(quantityField.getText());
