@@ -17,7 +17,7 @@ public class MainFrame extends JFrame {
                                                                                         public static void main(String[] args) {
                                                                                                 // Run the frame on the event dispatch thread
                                                                                                         SwingUtilities.invokeLater(() -> {
-                                                                                                                    ProductRegistrationFrame frame = new ProductRegistrationFrame();
+                                                                                                                    MainFrame frame = new MainFrame();
                                                                                                                                 frame.setVisible(true);
                                                                                                                                         });
                                                                                                                                             }
