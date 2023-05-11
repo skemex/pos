@@ -67,7 +67,7 @@ public class ProductRegistrationPanel extends JPanel {
                 double buyPrice = Double.parseDouble(buyPriceField.getText());
                 int quantity = Integer.parseInt(quantityField.getText());
                 double revenuePercentage = Double.parseDouble(revenueField.getText());
-                Product p = new Product(code, name, buyPrice, quantity, revenuePercentage);
+                Product p = new Product(code, name, buyPrice, revenuePercentage, quantity);
                 
 
             }
