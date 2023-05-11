@@ -23,7 +23,7 @@
 
     <version>4.2.0</version>
 
-    <scope>test</scope>
+    <scope>compile</scope>
 
   </dependency>
          <!-- JUnit 5 -->
