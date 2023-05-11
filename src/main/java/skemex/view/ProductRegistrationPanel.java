@@ -69,9 +69,7 @@ public class ProductRegistrationPanel extends JPanel {
                 double revenuePercentage = Double.parseDouble(revenueField.getText());
                 Product p = new Product(code, name, buyPrice, quantity, revenuePercentage);
                 
-                // Calculate and set sell price
-                p.calculateSellPrice();
-                sellPriceField.setText(String.format("%.2f", p.getSellPrice())); // Set sell price field to calculated value
+
             }
         });
     }
