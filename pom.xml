@@ -15,7 +15,57 @@
     </properties>
 
     <dependencies>
-        <!-- Add any required dependencies here -->
+         <!-- JUnit 5 -->
+
+        <dependency>
+
+            <groupId>org.junit.jupiter</groupId>
+
+            <artifactId>junit-jupiter-api</artifactId>
+
+            <version>5.8.1</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <dependency>
+
+            <groupId>org.junit.jupiter</groupId>
+
+            <artifactId>junit-jupiter-engine</artifactId>
+
+            <version>5.8.1</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+        <!-- Swing -->
+
+        <dependency>
+
+            <groupId>javax.swing</groupId>
+
+            <artifactId>javax.swing-api</artifactId>
+
+            <version>1.0</version>
+
+        </dependency>
+
+    </dependencies>
+
+</project>
+
+This pom.xml file specifies the JUnit 5 dependencies and the Swing dependency, and sets the source and target version to Java 17. Note that this is just an example, and the specific version numbers may change over time.
+
+Send a message.
+
+Free Research Preview. ChatGPT may produce inaccurate information about people, places, or fact
+        
+             
+             
+             <!-- Add any required dependencies here -->
     </dependencies>
 
     <build>
